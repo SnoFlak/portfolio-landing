@@ -1,0 +1,222 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.App {
+    overflow:hidden;
+}
+
+h2 {
+    font-family: 'Permanent Marker', cursive;
+    color: #E6E6E6;
+    font-size: 5rem;
+}
+
+.header-bar {
+    display: flex;
+    padding: 5px;
+    flex-direction: row;
+    background-color: #004FFF;
+    height: 15vh;
+    clip-path: polygon(100% 0%,100% 75%,0% 100%, 0% 0%);
+}
+
+.left-header {
+    display: flex;
+    flex-direction: row;
+    max-width: 90%;
+    width: 100%;
+}
+
+.header-text {
+    position: relative;
+    color: #EEF8FB;
+    padding: 5px;
+    transform: rotateZ(-1.5deg);
+}
+
+.header-text {
+    color: #EEF8FB;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 2rem;
+    vertical-align: top;
+}
+
+.name-text{
+    position: relative;
+    top: -20px;
+    font-size:4rem;
+}
+
+.title {
+    position: relative;
+    top: -40px;
+}
+
+.profile-pic {
+    height: 100%;
+    width: 25vh;
+    max-width: 100vw;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.nav-control-div {
+    transform: rotateZ(-0.75deg);
+    overflow:hidden;
+    max-width: 120%;
+    position: relative;
+    left: -10vw;
+    width: 120vw;
+}
+
+.nav-bar {
+    display: flex;
+    padding: 5px;
+    flex-direction: row;
+    background-color: #004FFF;
+    max-width: 100%;
+    position: relative;
+    left: -5vw;
+    width: 100%;
+    height: 7.5vh;
+    justify-content: space-evenly;
+    align-items: center;
+    clip-path: polygon(100% 0%,100% 75%,0% 100%, 0% 25%);
+}
+
+.nav-bar a {
+    color: #EEF8FB;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 1.5rem;
+    background-color: transparent;
+    transform: rotateZ(-.75deg);
+    border: none;
+    cursor:pointer;
+}
+
+.abt-me-btn {
+    position: relative;
+    top: 2px;
+}
+
+.proj-btn {
+    position: relative;
+    top: -3px;
+}
+
+.about, .skills, .projects {
+    margin-top: 5%;
+    margin-left: 5%;
+}
+
+.about-text, .project-text {
+    position: relative;
+    top: -5vh;
+    margin-left: 5%;
+    margin-right: 10%;
+    z-index: 2;
+}
+
+.project-text {
+    max-width: 45%;
+}
+
+.skills-container {
+    max-height: 10vh;
+    height: 10vh;
+}
+
+.skills-imgs {
+    display: flex;
+    flex-direction: row;
+    height: fit-content;
+    width: fit-content;
+}
+
+.skills-imgs li {
+    list-style: none;
+}
+
+@media screen and (max-width: 1024px) {
+    .left-header {
+        max-width: 100%;
+    }
+
+    .header-text h1, h1 {
+        transform: rotateZ(-1.25deg);
+    }
+
+    .nav-control-div{
+        transform: rotateZ(-1deg);
+    }
+
+    .nav-bar a {
+        transform: rotateZ(-0.75deg);
+    }
+
+    .projects-link-pc {
+        display: none;
+    }
+}
+
+/* @media screen and (max-width: 905px) {
+    .header-text {
+        font-size: 2rem;
+    }
+} */
+
+@media screen and (max-width: 610px) {
+    h2 {
+        font-size: 2rem;
+    }
+
+    .nav-bar a {
+        position: relative;
+        font-size: 1.25rem;
+        right: -20px;
+    }
+
+    .about-text {
+        top: 0px;
+    }
+
+    .header-text {
+        justify-content: center;
+    }
+    .name-text {
+      font-size: 10vw;
+      text-align: center;
+      transform: rotateZ(-2.5deg);
+      top: 0px;
+    }
+
+    .title {
+        text-align: center;
+        transform: rotateZ(-2.5deg);
+        top: -12px;
+        font-size: 1.5rem;
+    }
+
+
+    .left-header h1 {
+        padding: 0px;
+    }
+
+    .nav-control-div {
+        transform: rotateZ(-3deg);
+    }
+    
+    .nav-bar a {
+        transform: rotateZ(-2.5deg);
+    }
+
+    .profile-pic {
+        display: none;
+    }
+  }
