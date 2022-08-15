@@ -1,11 +1,22 @@
-
+import MATHIAS from '../imgs/Mathias.png';
+import Skills from './Skills.js';
 const About = () => {
     return(
-        <div className="about" id="about">
-            <h2>About Mathias</h2>
-            <div className="about-text">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <div className="about">
+            <div className="about-text-container">
+                <h2>About Mathias</h2>
+                <div className="about-text">
+                    <ul>
+                        <li>Creative and artsy, with a deep drive to always be learning, I love creating things with technology!</li>
+                        <li>Fast Learner with an attraction to critical thinking.</li>
+                        <li>Always looking for opportunities to branch out and do something new, exciting, and challenging.</li>
+                        <li>Humble, and dedicated to learning the most I can to a topic; Especially with other people as a team.</li>
+                        <li>Enjoys a good slice of pizza every now and then.</li>
+                    </ul>
+                </div>
+                <Skills />
             </div>
+            <img src={MATHIAS} alt='picture of Mathias' className="mathias"></img>
         </div>
     )
 }

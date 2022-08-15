@@ -1,8 +1,6 @@
 import './App.css';
-import Profile from './components/Profile';
 import Navigation from './components/Navigation';
 import About from './components/About';
-import Skills from './components/Skills';
 import Projects from './components/Projects';
 function App() {
   return (
@@ -10,10 +8,12 @@ function App() {
       <header>
         <div className="header-bar">
           <div className="left-header">
-            <Profile />
             <div className="header-text">
-              <h1 className="name-text">Mathias Sletten</h1>
-              <p className="title">Frontend Developer</p>
+              <div className="name-title">
+                <h1 className="name-text">Mathias Sletten</h1> 
+                <h1 className="frontend-developer">, Frontend Developer</h1>
+              </div>
+              <p className="info">mathiasasletten@gmail.com (701)-600-9009</p>
             </div>
           </div>
         </div>
@@ -22,7 +22,6 @@ function App() {
         <Navigation />
       </div>
       <About />
-      <Skills />
       <Projects />
     </div>
   );
