@@ -16,6 +16,11 @@ h2 {
     font-size: 5rem;
 }
 
+li {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+}
+
 .header-bar {
     display: flex;
     padding: 5px;
@@ -36,7 +41,7 @@ h2 {
     position: relative;
     color: #EEF8FB;
     padding: 5px;
-    transform: rotateZ(-1.5deg);
+    transform: rotateZ(-1deg);
 }
 
 .header-text {
@@ -46,13 +51,20 @@ h2 {
     vertical-align: top;
 }
 
-.name-text{
-    position: relative;
-    top: -20px;
-    font-size:4rem;
+.name-title {
+    display: flex;
+    flex-direction: row;
 }
 
-.title {
+.name-text, h1{
+    position: relative;
+    top: -35px;
+    font-size:5rem;
+}
+
+.info {
+    font-family: none;
+    font-size: 1rem;
     position: relative;
     top: -40px;
 }
@@ -110,29 +122,64 @@ h2 {
     top: -3px;
 }
 
-.about, .skills, .projects {
+.about, .projects {
     margin-top: 5%;
     margin-left: 5%;
 }
 
-.about-text, .project-text {
+.about {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.mathias {
     position: relative;
-    top: -5vh;
+    /* top: -10vh; */
+    filter: contrast(200%);
+}
+
+.about-text{
+    /* position: relative;
+    top: -5vh; */
     margin-left: 5%;
     margin-right: 10%;
     z-index: 2;
 }
 
+.project {
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+}
+
 .project-text {
+    font-size: 1.5rem;
+    width: 45%;
     max-width: 45%;
+    margin-left: 5%;
+    margin-right: 10%;
+}
+.project-text p {
+    font-size: 1.125rem;
+}
+
+.project-image {
+    max-width: 25%;
+    height: fit-content;
+    border: rgba(0,0,0,0.2) 2px solid;
+    border-radius: 3px;
 }
 
 .skills-container {
-    max-height: 10vh;
-    height: 10vh;
+    position: relative;
+    top: 10vh;
+    height: 15vh;
 }
 
 .skills-imgs {
+    position: relative;
+    top: -5vh;
     display: flex;
     flex-direction: row;
     height: fit-content;
@@ -144,6 +191,13 @@ h2 {
 }
 
 @media screen and (max-width: 1024px) {
+    .frontend-developer {
+        display: none;
+    }
+    .mathias {
+        display: none;
+    }
+
     .left-header {
         max-width: 100%;
     }
@@ -196,7 +250,7 @@ h2 {
       top: 0px;
     }
 
-    .title {
+    .info {
         text-align: center;
         transform: rotateZ(-2.5deg);
         top: -12px;
@@ -218,5 +272,13 @@ h2 {
 
     .profile-pic {
         display: none;
+    }
+    .project {
+        flex-direction: column;
+    }
+
+    .project-image {
+        margin-top: 20px;
+        max-width: 80%;
     }
   }
