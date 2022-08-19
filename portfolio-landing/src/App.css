@@ -63,6 +63,7 @@ li {
 }
 
 .info {
+    font-family: none;
     font-size: 1rem;
     position: relative;
     top: -40px;
@@ -139,8 +140,8 @@ li {
 }
 
 .about-text{
-    position: relative;
-    top: -5vh;
+    /* position: relative;
+    top: -5vh; */
     margin-left: 5%;
     margin-right: 10%;
     z-index: 2;
@@ -149,10 +150,12 @@ li {
 .project {
     display: flex;
     flex-direction: row;
+    margin-top: 10px;
 }
 
 .project-text {
     font-size: 1.5rem;
+    width: 45%;
     max-width: 45%;
     margin-left: 5%;
     margin-right: 10%;
