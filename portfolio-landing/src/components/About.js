@@ -16,7 +16,7 @@ const About = () => {
                 </div>
                 <Skills />
             </div>
-            <img src={MATHIAS} alt='picture of Mathias' className="mathias"></img>
+            <img src={MATHIAS} alt='Mathias Sletten with crossed arms' className="mathias"></img>
         </div>
     )
 }
