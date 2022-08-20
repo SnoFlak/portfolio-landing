@@ -16,7 +16,7 @@ const Projects = () => {
 
             <div className="project">
                 <div className="project-text">
-                    <a href="https://github.com/SnoFlak/storefront"><h3>Taskmeister (CRUD app) </h3></a>
+                    <a href="https://github.com/SnoFlak/Taskmeister"><h3>Taskmeister (CRUD app) </h3></a>
                     <p>Calendar Agenda created with Javascript, HTML, and CSS.</p>
                 </div>
                 <div className="project-image">

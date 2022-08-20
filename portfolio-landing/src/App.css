@@ -122,7 +122,12 @@ li {
     top: -3px;
 }
 
-.about, .projects {
+.contact-btn {
+    position: relative;
+    top: -6px;
+}
+
+.about, .projects, .contact {
     margin-top: 5%;
     margin-left: 5%;
 }
@@ -135,13 +140,10 @@ li {
 
 .mathias {
     position: relative;
-    /* top: -10vh; */
     filter: contrast(200%);
 }
 
 .about-text{
-    /* position: relative;
-    top: -5vh; */
     margin-left: 5%;
     margin-right: 10%;
     z-index: 2;
@@ -190,6 +192,43 @@ li {
     list-style: none;
 }
 
+.contact {
+    margin-bottom: 10%;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    padding-left: 5%;
+}
+
+.socials {
+    display: flex;
+    flex-direction: row;
+}
+
+.socials a {
+    max-width: 5%;
+    margin: 10px 10px 10px 0px;
+    width: 100%;
+}
+
+footer {
+    padding: 2%;
+    color: #EEF8FB;
+    background-color: #004FFF;
+}
+
+footer p {
+    font-size: 1.25rem;
+    padding-left: 5%;
+}
+
+.back-to-top {
+    width: 100vw;
+    text-align: center;
+}
+
 @media screen and (max-width: 1024px) {
     .frontend-developer {
         display: none;
@@ -218,12 +257,6 @@ li {
         display: none;
     }
 }
-
-/* @media screen and (max-width: 905px) {
-    .header-text {
-        font-size: 2rem;
-    }
-} */
 
 @media screen and (max-width: 610px) {
     h2 {
@@ -254,7 +287,7 @@ li {
         text-align: center;
         transform: rotateZ(-2.5deg);
         top: -12px;
-        font-size: 1.5rem;
+        font-size: 1.1rem;
     }
 
 
@@ -280,5 +313,8 @@ li {
     .project-image {
         margin-top: 20px;
         max-width: 80%;
+    }
+    .socials a {
+        max-width: 25%;
     }
   }
