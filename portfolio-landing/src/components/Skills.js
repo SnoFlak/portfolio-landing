@@ -8,7 +8,13 @@ import CHROME from '../imgs/chrome.png';
 const Skills = () => {
     return(
         <div className="skills" id="skills">
-            <h2>Skills</h2>
+            <div className="banner-container">
+                    <div className="banner-top" style={{backgroundColor: '#FA8334'}}>
+                        <h2>Skills</h2>
+                    </div>
+                    <div className="banner-fold" style={{backgroundColor: '#C75305'}}></div>
+                    <div className="banner-bottom" style={{background: 'linear-gradient(to right, #FA8334, rgba(254,254,254,0.1) 45%'}}></div>
+                </div>
             <div className="skills-container">
                 <ul className="skills-imgs">
                     <li>

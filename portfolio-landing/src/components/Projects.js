@@ -3,7 +3,13 @@ import TM from '../imgs/Taskmeister.png';
 const Projects = () => {
     return(
         <div className="projects">
-            <h2 id="projects">Projects</h2>
+            <div className="banner-container">
+                    <div className="banner-top" style={{backgroundColor: '#4CB944'}}>
+                        <h2 id="projects">Projects</h2>
+                    </div>
+                    <div className="banner-fold" style={{backgroundColor: '#31722C'}}></div>
+                    <div className="banner-bottom" style={{background: 'linear-gradient(to right, #4CB944, rgba(254, 254, 254, 0.1) 45%'}}></div>
+                </div>
             <div className="project">
                 <div className="project-text">
                     <a href="https://github.com/SnoFlak/storefront"><h3>Arrow (storefront) </h3></a>

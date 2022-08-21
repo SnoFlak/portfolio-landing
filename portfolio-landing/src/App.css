@@ -7,12 +7,14 @@
 }
 
 .App {
+    /* background: linear-gradient( #FEFEFE, #f0f0f0); */
+    background-color: #FEFEFE;
     overflow:hidden;
 }
 
 h2 {
     font-family: 'Permanent Marker', cursive;
-    color: #E6E6E6;
+    color: #EEF8FB;
     font-size: 5rem;
 }
 
@@ -85,6 +87,7 @@ li {
     position: relative;
     left: -10vw;
     width: 120vw;
+    margin-bottom: -8vh;
 }
 
 .nav-bar {
@@ -140,6 +143,8 @@ li {
 
 .mathias {
     position: relative;
+    left: -20%;
+    top: -10vh;
     filter: contrast(200%);
 }
 
@@ -229,6 +234,59 @@ footer p {
     text-align: center;
 }
 
+.banner-container {
+    transform: rotateZ(-0.75deg);
+    overflow:hidden;
+    position: relative;
+    max-width: 120%;
+    max-height: 25vh;
+    height: 25vh;
+    left: -10vw;
+    width: 120vw;
+    margin-bottom: -5vh;
+}
+
+.banner-top {
+    display: flex;
+    flex-direction: row;
+    min-height: 15vh;
+    background-color:#004FFF;
+    clip-path: polygon(50% 12.5%,50% 82.5%,0% 100%, 0% 25%);
+}
+
+.banner-top h2 {
+    position: relative;
+    top: 20px;
+    left: 10vw;
+    transform: rotateZ(-1.5deg);
+}
+
+.banner-fold {
+    position: relative;
+    top: calc(-60% + 1px);
+    z-index: -2;
+    max-width: 120%;
+    max-height: 15vh;
+    min-height: 15vh;
+    left: -4vw;
+    min-width: 120vw;
+    background-color: #01287d;
+    clip-path: polygon(50% 12.5%,50% 82.5%,40% 100%, 40% 25%);
+}
+
+.banner-bottom {
+    position: relative;
+    top:calc(-120% + 2px);
+    z-index: -3;
+    max-width: 50%;
+    max-height: 15vh;
+    min-height: 15vh;
+    left: 44vw;
+    min-width: 100vw;
+    background: linear-gradient(to right, #004FFF, rgba(254, 254, 254, 0.1) 45%);;
+    clip-path: polygon(50% 12.5%,50% 82.5%,0% 100%, 0% 25%);
+}
+
 @media screen and (max-width: 1024px) {
     .frontend-developer {
         display: none;
@@ -247,6 +305,7 @@ footer p {
 
     .nav-control-div{
         transform: rotateZ(-1deg);
+        margin-bottom: 0;
     }
 
     .nav-bar a {
@@ -255,6 +314,11 @@ footer p {
 
     .projects-link-pc {
         display: none;
+    }
+
+    .banner-top h2 {
+        top: 30px;
+        font-size: 4rem;
     }
 }
 
@@ -309,12 +373,23 @@ footer p {
     .project {
         flex-direction: column;
     }
+    .project-text {
+        max-width: 80%;
+        width: 80%;
+    }
 
     .project-image {
         margin-top: 20px;
         max-width: 80%;
     }
+    .banner-top h2 {
+        font-size: 2rem;
+        top: 5vh;
+        left: 7vw;
+        transform: rotateZ(-5deg);
+    }
     .socials a {
         max-width: 25%;
     }
+
   }
