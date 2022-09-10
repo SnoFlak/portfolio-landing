@@ -4,392 +4,116 @@
     padding: 0px;
     max-width: 100%;
     max-height: 100%;
+    font-family: 'Roboto Mono', monospace;
 }
 
-.App {
-    /* background: linear-gradient( #FEFEFE, #f0f0f0); */
-    background-color: #FEFEFE;
-    overflow:hidden;
+body {
+    min-height: 100vh;
+    background: linear-gradient( rgb(31, 31, 31), rgb(20, 20, 20));
+    color: #fefefe;
 }
 
-h2 {
-    font-family: 'Permanent Marker', cursive;
-    color: #EEF8FB;
-    font-size: 5rem;
-}
-
-li {
+b {
     font-size: 1.25rem;
-    margin-bottom: 10px;
 }
 
-.header-bar {
+header {
     display: flex;
-    padding: 5px;
     flex-direction: row;
-    background-color: #004FFF;
-    height: 15vh;
-    clip-path: polygon(100% 0%,100% 75%,0% 100%, 0% 0%);
+    justify-content:space-between;
 }
 
 .left-header {
-    display: flex;
-    flex-direction: row;
-    max-width: 90%;
-    width: 100%;
-}
-
-.header-text {
-    position: relative;
-    color: #EEF8FB;
-    padding: 5px;
-    transform: rotateZ(-1deg);
-}
-
-.header-text {
-    color: #EEF8FB;
-    font-family: 'Permanent Marker', cursive;
-    font-size: 2rem;
-    vertical-align: top;
-}
-
-.name-title {
-    display: flex;
-    flex-direction: row;
-}
-
-.name-text, h1{
-    position: relative;
-    top: -35px;
-    font-size:5rem;
-}
-
-.info {
-    font-family: none;
-    font-size: 1rem;
-    position: relative;
-    top: -40px;
-}
-
-.profile-pic {
-    height: 100%;
-    width: 25vh;
-    max-width: 100vw;
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-.nav-control-div {
-    transform: rotateZ(-0.75deg);
-    overflow:hidden;
-    max-width: 120%;
-    position: relative;
-    left: -10vw;
-    width: 120vw;
-    margin-bottom: -8vh;
-}
-
-.nav-bar {
-    display: flex;
-    padding: 5px;
-    flex-direction: row;
-    background-color: #004FFF;
-    max-width: 100%;
-    position: relative;
-    left: -5vw;
-    width: 100%;
-    height: 7.5vh;
-    justify-content: space-evenly;
-    align-items: center;
-    clip-path: polygon(100% 0%,100% 75%,0% 100%, 0% 25%);
-}
-
-.nav-bar a {
-    color: #EEF8FB;
-    font-family: 'Permanent Marker', cursive;
-    font-size: 1.5rem;
-    background-color: transparent;
-    transform: rotateZ(-.75deg);
-    border: none;
-    cursor:pointer;
-}
-
-.abt-me-btn {
-    position: relative;
-    top: 2px;
-}
-
-.proj-btn {
-    position: relative;
-    top: -3px;
-}
-
-.contact-btn {
-    position: relative;
-    top: -6px;
-}
-
-.about, .projects, .contact {
-    margin-top: 5%;
-    margin-left: 5%;
-}
-
-.about {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-.mathias {
-    position: relative;
-    left: -20%;
-    top: -10vh;
-    filter: contrast(200%);
-}
-
-.about-text{
-    margin-left: 5%;
-    margin-right: 10%;
-    z-index: 2;
-}
-
-.project {
-    display: flex;
-    flex-direction: row;
-    margin-top: 10px;
-}
-
-.project-text {
-    font-size: 1.5rem;
-    width: 45%;
-    max-width: 45%;
-    margin-left: 5%;
-    margin-right: 10%;
-}
-.project-text p {
-    font-size: 1.125rem;
-}
-
-.project-image {
-    max-width: 25%;
-    height: fit-content;
-    border: rgba(0,0,0,0.2) 2px solid;
-    border-radius: 3px;
-}
-
-.skills-container {
-    position: relative;
-    top: 10vh;
-    height: 15vh;
-}
-
-.skills-imgs {
-    position: relative;
-    top: -5vh;
-    display: flex;
-    flex-direction: row;
-    height: fit-content;
-    width: fit-content;
-}
-
-.skills-imgs li {
-    list-style: none;
-}
-
-.contact {
-    margin-bottom: 10%;
-}
-
-.contact-info {
+    margin: 1vh 1vw;
     display: flex;
     flex-direction: column;
-    padding-left: 5%;
+    justify-content: center;
 }
 
-.socials {
+.left-header span {
+    color: cyan;
+}
+
+.left-header p {
+    font-size: 0.75rem;
+    margin: 0px 1vw;
+}
+
+.right-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.right-header a {
+    margin: 1vh 1vw;
+    text-decoration: none;
+    color: cyan;
+}
+
+.stacks {
+    padding-top: 2.5%;
+    padding-right: 75px;
+}
+
+.skills-carousel {
+    position: relative;
+    left: -75px;
+    overflow: hidden;
+    height: 250px;
+    max-width: 100%; 
     display: flex;
     flex-direction: row;
 }
 
-.socials a {
-    max-width: 5%;
-    margin: 10px 10px 10px 0px;
-    width: 100%;
+.skill-container {
+    position: absolute;
+    left: -75px;
+    top: calc(125 - 75)px;
+    justify-content: center;
+    align-items: center;
+    max-width: 150px;
+    max-height: 150px;
+    animation-name: skill-container;
+    animation-duration: 16s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+@keyframes skill {
+    /* 12.5% increments for the 8 skills inside the carousel */
+    0% {width: 50px; height: 50px;top: 0px;opacity: 0.1;}
+    25% {width: 100px; height: 100px; top: 40px;}
+    37.5% {top: 60px;opacity: 0.2}
+    50% {opacity: 1;width: 150px; height: 150px; top: 70px;}
+    62.5% {top: 60px;opacity: 0.2}
+    75% {width: 100px; height: 100px;top: 40px;}
+    100% {width: 50px; height: 50px;top: 0px;opacity: 0.1;}
 }
 
-footer {
-    padding: 2%;
-    color: #EEF8FB;
-    background-color: #004FFF;
+@keyframes skill-container {
+    0% {left: 50%; z-index: 1}
+    12.5% {z-index: 2; left: 38.5%;}
+    25% {left: 25%;z-index: 3}
+    37.5% {z-index: 4; left: 38.5%;}
+    50% {left: 50%;z-index: 5}
+    62.5% {z-index: 4; left: 62.5%;}
+    75% {left: 75%;z-index: 3}
+    87.5% {z-index: 2; left: 62.5%;}
+    100% {left: 50%;z-index: 1}
 }
 
-footer p {
-    font-size: 1.25rem;
-    padding-left: 5%;
+.skill {
+    position: absolute;
+    top: 50%;
+    max-height: 150px;
+    max-width: 150px;
+    animation-name: skill;
+    animation-duration: 16s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
 }
 
-.back-to-top {
-    width: 100vw;
-    text-align: center;
+.anim2 {
+    animation-delay: -2s;
 }
-
-.banner-container {
-    transform: rotateZ(-0.75deg);
-    overflow:hidden;
-    position: relative;
-    max-width: 120%;
-    max-height: 25vh;
-    height: 25vh;
-    left: -10vw;
-    width: 120vw;
-    margin-bottom: -5vh;
-}
-
-.banner-top {
-    display: flex;
-    flex-direction: row;
-    min-height: 15vh;
-    background-color:#004FFF;
-    clip-path: polygon(50% 12.5%,50% 82.5%,0% 100%, 0% 25%);
-}
-
-.banner-top h2 {
-    position: relative;
-    top: 20px;
-    left: 10vw;
-    transform: rotateZ(-1.5deg);
-}
-
-.banner-fold {
-    position: relative;
-    top: calc(-60% + 1px);
-    z-index: -2;
-    max-width: 120%;
-    max-height: 15vh;
-    min-height: 15vh;
-    left: -4vw;
-    min-width: 120vw;
-    background-color: #01287d;
-    clip-path: polygon(50% 12.5%,50% 82.5%,40% 100%, 40% 25%);
-}
-
-.banner-bottom {
-    position: relative;
-    top:calc(-120% + 2px);
-    z-index: -3;
-    max-width: 50%;
-    max-height: 15vh;
-    min-height: 15vh;
-    left: 44vw;
-    min-width: 100vw;
-    background: linear-gradient(to right, #004FFF, rgba(254, 254, 254, 0.1) 45%);;
-    clip-path: polygon(50% 12.5%,50% 82.5%,0% 100%, 0% 25%);
-}
-
-@media screen and (max-width: 1024px) {
-    .frontend-developer {
-        display: none;
-    }
-    .mathias {
-        display: none;
-    }
-
-    .left-header {
-        max-width: 100%;
-    }
-
-    .header-text h1, h1 {
-        transform: rotateZ(-1.25deg);
-    }
-
-    .nav-control-div{
-        transform: rotateZ(-1deg);
-        margin-bottom: 0;
-    }
-
-    .nav-bar a {
-        transform: rotateZ(-0.75deg);
-    }
-
-    .projects-link-pc {
-        display: none;
-    }
-
-    .banner-top h2 {
-        top: 30px;
-        font-size: 4rem;
-    }
-}
-
-@media screen and (max-width: 610px) {
-    h2 {
-        font-size: 2rem;
-    }
-
-    .nav-bar a {
-        position: relative;
-        font-size: 1.25rem;
-        right: -20px;
-    }
-
-    .about-text {
-        top: 0px;
-    }
-
-    .header-text {
-        justify-content: center;
-    }
-    .name-text {
-      font-size: 10vw;
-      text-align: center;
-      transform: rotateZ(-2.5deg);
-      top: 0px;
-    }
-
-    .info {
-        text-align: center;
-        transform: rotateZ(-2.5deg);
-        top: -12px;
-        font-size: 1.1rem;
-    }
-
-
-    .left-header h1 {
-        padding: 0px;
-    }
-
-    .nav-control-div {
-        transform: rotateZ(-3deg);
-    }
-    
-    .nav-bar a {
-        transform: rotateZ(-2.5deg);
-    }
-
-    .profile-pic {
-        display: none;
-    }
-    .project {
-        flex-direction: column;
-    }
-    .project-text {
-        max-width: 80%;
-        width: 80%;
-    }
-
-    .project-image {
-        margin-top: 20px;
-        max-width: 80%;
-    }
-    .banner-top h2 {
-        font-size: 2rem;
-        top: 5vh;
-        left: 7vw;
-        transform: rotateZ(-5deg);
-    }
-    .socials a {
-        max-width: 25%;
-    }
-
-  }
