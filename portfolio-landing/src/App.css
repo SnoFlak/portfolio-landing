@@ -8,8 +8,9 @@
 }
 
 body {
+    position: sticky;
     min-height: 100vh;
-    background: linear-gradient( rgb(31, 31, 31), rgb(20, 20, 20));
+    /* background: linear-gradient( rgb(31, 31, 31), rgb(20, 20, 20)); */
     color: #fefefe;
 }
 
@@ -21,6 +22,20 @@ header {
     display: flex;
     flex-direction: row;
     justify-content:space-between;
+}
+
+/* .app-body, header{
+    animation-name: load;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+} */
+
+.background {
+    z-index: -1;
+    position: fixed;
+    min-width: 100%;
+    min-height: 100%;
+    background: linear-gradient( rgb(31, 31, 31), rgb(20, 20, 20));
 }
 
 .left-header {
@@ -80,6 +95,96 @@ header {
     animation-timing-function: linear;
     animation-iteration-count: infinite;
 }
+
+.skill {
+    position: absolute;
+    top: 50%;
+    max-height: 150px;
+    max-width: 150px;
+    animation-name: skill;
+    animation-duration: 16s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.main-content {
+    display: flex;
+    justify-content: center;
+}
+
+.ide {
+    font-size: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 70%;
+    max-width: 70%;
+}
+
+.ide-line {
+    min-width: 100%;
+    display:flex;
+    flex-direction: column;
+}
+
+.main-line-content {
+    z-index: 4;
+    display: flex;
+    flex-direction: row;
+}
+
+.expanded-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    min-height: 50%;
+    animation-name: load;
+    animation-duration: 1s;
+}
+
+.line-num {
+    width: 10%;
+    color: #404040;
+    text-align: center;
+    background-color: #121212;
+    user-select: none;
+}
+
+.line-num-container {
+    position: relative;
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+}
+
+.line-num-digit {
+    width: 100%;
+}
+
+.line-code {
+    width: 80%;
+}
+
+.line-code span {
+    color: rgb(0, 144, 144);
+}
+
+.collapse {
+    position: absolute;
+    background-size: contain;
+    left: 80%;
+    width: 20%;
+    height: 100%;
+    cursor: pointer;
+}
+
+@keyframes load {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
 @keyframes skill {
     /* 12.5% increments for the 8 skills inside the carousel */
     0% {width: 50px; height: 50px;top: 0px;opacity: 0.1;}
@@ -101,19 +206,4 @@ header {
     75% {left: 75%;z-index: 3}
     87.5% {z-index: 2; left: 62.5%;}
     100% {left: 50%;z-index: 1}
-}
-
-.skill {
-    position: absolute;
-    top: 50%;
-    max-height: 150px;
-    max-width: 150px;
-    animation-name: skill;
-    animation-duration: 16s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-}
-
-.anim2 {
-    animation-delay: -2s;
 }

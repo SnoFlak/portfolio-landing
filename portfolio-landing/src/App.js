@@ -1,11 +1,13 @@
 import './App.css';
 import SkillsCarousel from './components/SkillsCarousel.js';
+import IDEcontainer from './components/IDEcontainer';
 function App() {
   return (
     <div className="App" id="home">
       {
         //start fresh, start refreshed, start renewed
       }
+      <div className="background"></div>
       <header>
         <div className="left-header">
           <h1><b><span>this</span>.name=</b>(<span>"Mathias Sletten"</span>);</h1>
@@ -17,9 +19,12 @@ function App() {
           <a href='/'>.contact();</a>
         </nav>
       </header>
-      <div>
+      <div className="app-body">
         <div className="stacks">
           <SkillsCarousel />
+        </div>
+        <div className="main-content">
+          <IDEcontainer />
         </div>
       </div>
     </div>
