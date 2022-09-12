@@ -23,6 +23,10 @@ header {
     flex-direction: row;
     justify-content:space-between;
 }
+a {
+    text-decoration: none;
+    color: #fefefe;
+}
 
 /* .app-body, header{
     animation-name: load;
@@ -119,6 +123,7 @@ header {
     justify-content: center;
     min-width: 70%;
     max-width: 70%;
+    margin-bottom: 10%;
 }
 
 .ide-line {
@@ -180,6 +185,14 @@ header {
     cursor: pointer;
 }
 
+/* will get this funcitonality working eventually */
+#pic-backdrop {
+    position: absolute;
+    left: 25%;
+    width: 25vh;
+    height: 25vh;
+}
+
 @keyframes load {
     0% {opacity: 0;}
     100% {opacity: 1;}
@@ -206,4 +219,32 @@ header {
     75% {left: 75%;z-index: 3}
     87.5% {z-index: 2; left: 62.5%;}
     100% {left: 50%;z-index: 1}
+}
+
+@media screen and (max-width: 1024px) {
+
+    header {
+        flex-direction: column;
+    }
+
+    .left-header {
+        align-items: center;
+        text-align: center;
+    }
+
+    .ide {
+        font-size: 1rem;
+    }
+
+    @keyframes skill {
+        /* 12.5% increments for the 8 skills inside the carousel */
+        0% {width: 50px; height: 50px;top: 0px;opacity: 0.1;}
+        25% {width: 75px; height: 75px; top: 40px;}
+        37.5% {top: 60px;opacity: 0.2}
+        50% {opacity: 1;width: 100px; height: 100px; top: 70px;}
+        62.5% {top: 60px;opacity: 0.2}
+        75% {width: 75px; height: 75px;top: 40px;}
+        100% {width: 50px; height: 50px;top: 0px;opacity: 0.1;}
+    }
+    
 }

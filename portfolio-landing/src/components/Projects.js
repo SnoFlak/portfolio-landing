@@ -1,12 +1,14 @@
 import IDELineTemplate from "./IDELineTemplate";
+
 const Projects = () => {
     let StoreFrontCommentText = "// E-commerce storefront created using React.js, JSX, and CSS"
     let TaskmeisterCommentText = "// Calender with event tracking";
     let CalculatorCommentText = "// Calculator built with Typescript, HTML, CSS"
+
     return(
         <div className="ide-line">
             <IDELineTemplate lineNum={4} />
-            <IDELineTemplate lineNum={5} lineCode={"// Click projects to view, hover to see a picture"} isComment={true} isIndented={true}/>
+            <IDELineTemplate lineNum={5} lineCode={"// Click projects to view"} isComment={true} isIndented={true}/>
             <IDELineTemplate lineNum={6} />
             <div className="main-line-content">
                 <div className="line-num">
@@ -15,7 +17,7 @@ const Projects = () => {
                     </div>
                 </div>
                 <div className="line-code">
-                    <p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let</span> Storefront = <span style={{color: "cyan",}}>"E-Commerce Storefront"</span>;</p>
+                    <p id="storefront"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let</span> Storefront = <span style={{color: "cyan",}}>"E-Commerce Storefront"</span>;</p>
                 </div>
             </div>
 
@@ -29,7 +31,7 @@ const Projects = () => {
                     </div>
                 </div>
                 <div className="line-code">
-                    <p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let</span> Taskmeister = <span style={{color: "cyan",}}>"Task Calendar"</span>;</p>
+                    <p id="taskmeister"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let</span> Taskmeister = <span style={{color: "cyan",}}>"Task Calendar"</span>;</p>
                 </div>
             </div>
 
@@ -43,7 +45,7 @@ const Projects = () => {
                     </div>
                 </div>
                 <div className="line-code">
-                    <p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let</span> Calculator = <span style={{color: "cyan",}}>"Calculator"</span>;</p>
+                    <a href="https://cute-stroopwafel-c17b4d.netlify.app/"><p id="calculator"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let</span> Calculator = <span style={{color: "cyan",}}>"Calculator"</span>;</p></a>
                 </div>
             </div>
             <IDELineTemplate lineNum={14} lineCode={CalculatorCommentText} isComment={true} isIndented={true}/>
