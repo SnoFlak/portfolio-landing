@@ -1,34 +1,55 @@
-import ARROW from '../imgs/ArrowStorefront.png';
-import TM from '../imgs/Taskmeister.png';
+import IDELineTemplate from "./IDELineTemplate";
+
 const Projects = () => {
+    let StoreFrontCommentText = "// E-commerce storefront created using React.js, JSX, and CSS"
+    let TaskmeisterCommentText = "// Calender with event tracking";
+    let CalculatorCommentText = "// Calculator built with Typescript, HTML, CSS"
+
     return(
-        <div className="projects">
-            <div className="banner-container">
-                    <div className="banner-top" style={{backgroundColor: '#4CB944'}}>
-                        <h2 id="projects">Projects</h2>
+        <div className="ide-line">
+            <IDELineTemplate lineNum={4} />
+            <IDELineTemplate lineNum={5} lineCode={"// Click projects to view"} isComment={true} isIndented={true}/>
+            <IDELineTemplate lineNum={6} />
+            <div className="main-line-content">
+                <div className="line-num">
+                    <div className="line-num-container">
+                        <p className="line-num-digit">7</p>
                     </div>
-                    <div className="banner-fold" style={{backgroundColor: '#31722C'}}></div>
-                    <div className="banner-bottom" style={{background: 'linear-gradient(to right, #4CB944, rgba(254, 254, 254, 0.1) 45%'}}></div>
                 </div>
-            <div className="project">
-                <div className="project-text">
-                    <a href="https://github.com/SnoFlak/storefront"><h3>Arrow (storefront) </h3></a>
-                    <p>E-Commerce Storefront webpage created with React, React-Router, JSX, and CSS, using the Fakestore API.</p>
-                </div>
-                <div className="project-image">
-                    <img src={ARROW} alt='arrow storefront item page'></img>
+                <div className="line-code">
+                    <p id="storefront"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let</span> Storefront = <span style={{color: "cyan",}}>"E-Commerce Storefront"</span>;</p>
                 </div>
             </div>
 
-            <div className="project">
-                <div className="project-text">
-                    <a href="https://github.com/SnoFlak/Taskmeister"><h3>Taskmeister (CRUD app) </h3></a>
-                    <p>Calendar Agenda created with Javascript, HTML, and CSS.</p>
+            <IDELineTemplate lineNum={8} lineCode={StoreFrontCommentText} isComment={true} isIndented={true}/>
+            <IDELineTemplate lineNum={9} />
+
+            <div className="main-line-content">
+                <div className="line-num">
+                    <div className="line-num-container">
+                        <p className="line-num-digit">10</p>
+                    </div>
                 </div>
-                <div className="project-image">
-                    <img src={TM} alt='arrow storefront item page'></img>
+                <div className="line-code">
+                    <p id="taskmeister"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let</span> Taskmeister = <span style={{color: "cyan",}}>"Task Calendar"</span>;</p>
                 </div>
             </div>
+
+            <IDELineTemplate lineNum={11} lineCode={TaskmeisterCommentText} isComment={true} isIndented={true}/>
+            <IDELineTemplate lineNum={12} />
+
+            <div className="main-line-content">
+                <div className="line-num">
+                    <div className="line-num-container">
+                        <p className="line-num-digit">13</p>
+                    </div>
+                </div>
+                <div className="line-code">
+                    <a href="https://cute-stroopwafel-c17b4d.netlify.app/"><p id="calculator"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let</span> Calculator = <span style={{color: "cyan",}}>"Calculator"</span>;</p></a>
+                </div>
+            </div>
+            <IDELineTemplate lineNum={14} lineCode={CalculatorCommentText} isComment={true} isIndented={true}/>
+            <IDELineTemplate lineNum={15} lineCode={<span style={{color: "#fefefe"}}>&#125;</span>}/>
         </div>
     )
 }
