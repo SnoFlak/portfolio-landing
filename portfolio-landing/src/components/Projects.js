@@ -17,7 +17,7 @@ const Projects = () => {
                     </div>
                 </div>
                 <div className="line-code">
-                    <p id="storefront"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let</span> Storefront = <span style={{color: "cyan",}}>"E-Commerce Storefront"</span>;</p>
+                    <a href="https://github.com/SnoFlak/storefront/tree/main/storefront"><p id="storefront"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let</span> Storefront = <span style={{color: "cyan",}}>"E-Commerce Storefront"</span>;</p></a>
                 </div>
             </div>
 
@@ -31,7 +31,7 @@ const Projects = () => {
                     </div>
                 </div>
                 <div className="line-code">
-                    <p id="taskmeister"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let</span> Taskmeister = <span style={{color: "cyan",}}>"Task Calendar"</span>;</p>
+                <a href="https://github.com/SnoFlak/Taskmeister"><p id="taskmeister"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let</span> Taskmeister = <span style={{color: "cyan",}}>"Task Calendar"</span>;</p></a>
                 </div>
             </div>
 
