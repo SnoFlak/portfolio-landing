@@ -236,6 +236,11 @@ a {
         font-size: 1rem;
     }
 
+    .skills-carousel {
+        left: 0px;
+        width: 100%;
+    }
+
     @keyframes skill {
         /* 12.5% increments for the 8 skills inside the carousel */
         0% {width: 50px; height: 50px;top: 0px;opacity: 0.1;}
@@ -245,6 +250,77 @@ a {
         62.5% {top: 60px;opacity: 0.2}
         75% {width: 75px; height: 75px;top: 40px;}
         100% {width: 50px; height: 50px;top: 0px;opacity: 0.1;}
+    }
+    
+}
+
+@media screen and (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+    }
+
+    .left-header {
+        align-items: center;
+        text-align: center;
+    }
+
+    .ide {
+        font-size: 1rem;
+    }
+
+    .skills-carousel {
+        left: 0px;
+        width: 100%;
+        height: 200px;
+    }
+
+    .stacks {
+        padding: 8px 35px 0px 0px;
+    }
+
+    .ide{
+        font-size: 14px;
+        min-width: 90%;
+    }
+    
+    .left-header h1 b{
+        display: none;
+    }
+
+    .left-header h1 {
+        font-size: 1.625rem;
+    }
+
+    .right-header {
+        font-size: 0.8rem;
+    }
+
+    .right-header a {
+        padding: 0px 5px;
+    }
+
+    @keyframes skill {
+        /* 12.5% increments for the 8 skills inside the carousel */
+        0% {width: 20px; height: 20px;top: 0px;opacity: 0.1;}
+        25% {width: 35px; height: 35px; top: 40px;}
+        37.5% {top: 60px;opacity: 0.2}
+        50% {opacity: 1;width: 60px; height: 60px; top: 70px;}
+        62.5% {top: 60px;opacity: 0.2}
+        75% {width: 35px; height: 35px;top: 40px;}
+        100% {width: 20px; height: 20px;top: 0px;opacity: 0.1;}
+    }
+
+    @keyframes skill-container {
+        0% {left: 50%; z-index: 1}
+        12.5% {z-index: 2; left: 35%;}
+        25% {left: 15%;z-index: 3}
+        37.5% {z-index: 4; left: 35%;}
+        50% {left: 50%;z-index: 5}
+        62.5% {z-index: 4; left: 65%;}
+        75% {left: 85%;z-index: 3}
+        87.5% {z-index: 2; left: 65%;}
+        100% {left: 50%;z-index: 1}
     }
     
 }
