@@ -13,7 +13,6 @@ const IDEline = ({hasCollapse, firstWord, lineText, num, isComment, collapseCont
 
     const updateCollapseState = () => {
         setCollapseState(!collapseState);
-        console.log(collapseState);
     }
 
     return(

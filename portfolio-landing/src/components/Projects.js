@@ -45,7 +45,7 @@ const Projects = () => {
                     </div>
                 </div>
                 <div className="line-code">
-                    <a href="https://cute-stroopwafel-c17b4d.netlify.app/"><p id="calculator"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let</span> Calculator = <span style={{color: "cyan",}}>"Calculator"</span>;</p></a>
+                    <a href="https://vocal-vacherin-1171ad.netlify.app/"><p id="calculator"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let</span> MyReads = <span style={{color: "cyan",}}>"Bookshelf"</span>;</p></a>
                 </div>
             </div>
             <IDELineTemplate lineNum={14} lineCode={CalculatorCommentText} isComment={true} isIndented={true}/>

@@ -28,6 +28,13 @@ a {
     color: #fefefe;
 }
 
+.text-field {
+    background-color: transparent;
+    border: none;
+    color: #fefefe;
+    font-size: 20px;
+}
+
 /* .app-body, header{
     animation-name: load;
     animation-duration: 3s;
@@ -185,6 +192,19 @@ a {
     cursor: pointer;
 }
 
+.submit-form-button {
+    font-size: 20px;
+    color:cyan;
+    background-color:#121212;
+    border: none;
+    padding: 0px 50px;
+    margin: 5px;
+}
+
+textarea {
+    min-width: 100%;
+}
+
 /* will get this funcitonality working eventually */
 #pic-backdrop {
     position: absolute;
@@ -232,7 +252,7 @@ a {
         text-align: center;
     }
 
-    .ide {
+    .ide, .text-field {
         font-size: 1rem;
     }
 
@@ -265,10 +285,6 @@ a {
         text-align: center;
     }
 
-    .ide {
-        font-size: 1rem;
-    }
-
     .skills-carousel {
         left: 0px;
         width: 100%;
@@ -279,7 +295,7 @@ a {
         padding: 8px 35px 0px 0px;
     }
 
-    .ide{
+    .ide, .text-field{
         font-size: 14px;
         min-width: 90%;
     }
