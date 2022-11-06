@@ -32,21 +32,17 @@ const Contact = () => {
                             <p className="line-num-digit">42</p>
                         </div>
                     </div>
-                    <div className="line-code" style={{display: 'flex', flexDirection: 'row'}}>
-                        <p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>message:</p>
-                        &nbsp;<textarea className="text-field" type="text" name="message" placeholder="Type your message here..."></textarea>
-                    </div>
-                </div>
-                <div className="main-line-content">
-                    <div className="line-num">
-                        <div className="line-num-container">
-                            <p className="line-num-digit">43</p>
+                    <div className="line-code">
+                        <div style={{display: 'flex', flexDirection: "row"}}>
+                            <p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>message:</p>
+                            &nbsp;<textarea className="text-field" type="text" name="message" placeholder="Type your message here..."></textarea>
+                        </div>
+                        <div>
+                            <input className="submit-form-button" type="submit" value="SEND"></input>
                         </div>
                     </div>
-                    <div className="line-code">
-                        <p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><input className="submit-form-button" type="submit" value="SEND"></input></p>
-                    </div>
                 </div>
+                <IDELineTemplate lineNum={43} lineCode={<span style={{color: "#fefefe"}}>&#125;</span>}/>
         </div>
     )
 }

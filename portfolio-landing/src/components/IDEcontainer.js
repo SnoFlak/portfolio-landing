@@ -4,7 +4,7 @@ import Projects from "./Projects";
 import Experience from "./Experience";
 import Contact from "./Contact";
 
-const IDEcontainer = () => {
+const IDEcontainer = ({setFormState}) => {
 
     return(
         <div className="ide">
@@ -15,7 +15,7 @@ const IDEcontainer = () => {
             <IDEline num={17} firstWord={"function"} hasCollapse={true} lineText={" Experience () {"} collapseContent={Experience}/>
             <IDELineTemplate lineNum={35} />
             <form id="contact-form">
-                <IDEline num={36} firstWord={"function"} hasCollapse={true} lineText={" Contact () {"} collapseContent={Contact}/>
+                <IDEline num={36} firstWord={"function"} hasCollapse={true} lineText={" Contact () {"} collapseContent={Contact} setFormState={setFormState}/>
             </form>
         </div>
     )

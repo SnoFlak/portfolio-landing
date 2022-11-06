@@ -18,31 +18,69 @@
       window.onload = function() {
           document.getElementById('contact-form').addEventListener('submit', function(event) {
               event.preventDefault();
-              let canSend = true;
+              let formSubElement = document.getElementById('form-submission');
+              let formSubMessage = document.getElementById('submission-message');
 
+              formSubElement.className = "form-submission";
+
+              let canSend = true;
               if (event.target[0].value === "") {
-                window.alert('Please provide a name.');
                 canSend = false;
+                if (formSubElement){
+                  formSubElement.classList.add("form-failure");
+                }
+                if (formSubMessage){
+                  formSubMessage.style.color = "orange";
+                  formSubMessage.innerText = "Please provide a Name";
+                }
               }
 
-              if (event.target[1].value === "" && canSend === true) {
-                window.alert('Please provide your E-Mail address.');
+              if ((event.target[1].value === "" && canSend === true) || (event.target[1].value.indexOf('@') === -1 && canSend === true)){
                 canSend = false;
+                if (formSubElement){
+                  formSubElement.classList.add("form-failure");
+                }
+                if (formSubMessage){
+                  formSubMessage.style.color = "orange";
+                  formSubMessage.innerText = "Please provide an Email";
+                }
               }
 
               if (event.target[2].value === "" && canSend === true) {
-                window.alert("Please provide a message.");
                 canSend = false;
+                if (formSubElement){
+                  formSubElement.classList.add("form-failure");
+                }
+                if (formSubMessage){
+                  formSubMessage.style.color = "orange";
+                  formSubMessage.innerText = "Please provide a message";
+                }
               }
 
               if (canSend) {
                 emailjs.sendForm('service_a0jjx3w', 'template_8xj9gdj', this)
                   .then(function() {
-                      window.alert('Message sent successfully!');
+                    if (formSubElement){
+                      formSubElement.classList.add("form-success");
+                    }
+                    if (formSubMessage){
+                      formSubMessage.style.color = "cyan";
+                      formSubMessage.innerText = "Message sent successfully";
+                    }
                   }, function(error) {
-                      window.alert('Message FAILED to send! Please try again.', error);
+                    if (formSubElement){
+                      formSubElement.classList.add("form-failure");
+                    }
+                    if (formSubMessage){
+                      formSubMessage.style.color = "red";
+                      formSubMessage.innerText = "FAILED to send message. Try again.";
+                    }
                   });
               }
+
+              setTimeout(function () {
+                formSubElement.className = "form-submission";
+              }, 4000)
           });
       }
   </script>
