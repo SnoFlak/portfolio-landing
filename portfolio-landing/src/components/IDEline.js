@@ -2,7 +2,7 @@ import {useState} from "react";
 
 import EXPAND from "../imgs/expand.png";
 
-const IDEline = ({hasCollapse, firstWord, lineText, num, isComment, collapseContent: CollapseContent}) => {
+const IDEline = ({hasCollapse, firstWord, lineText, num, isComment, collapseContent: CollapseContent, setFormState}) => {
     let commentStyle = {}
 
     if (isComment === true) {
@@ -13,7 +13,6 @@ const IDEline = ({hasCollapse, firstWord, lineText, num, isComment, collapseCont
 
     const updateCollapseState = () => {
         setCollapseState(!collapseState);
-        console.log(collapseState);
     }
 
     return(
@@ -51,7 +50,7 @@ const IDEline = ({hasCollapse, firstWord, lineText, num, isComment, collapseCont
             {
                 (collapseState === true ? "": 
                     <div className="expanded-content">
-                        {<CollapseContent /> || ""}
+                        {<CollapseContent/> || ""}
                     </div>
                 )
             }

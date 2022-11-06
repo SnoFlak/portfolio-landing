@@ -7,6 +7,83 @@
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+      (function() {
+          // https://dashboard.emailjs.com/admin/account
+          emailjs.init('EEpd654M05gsW9x9b');
+      })();
+    </script>
+    <script type="text/javascript">
+      window.onload = function() {
+          document.getElementById('contact-form').addEventListener('submit', function(event) {
+              event.preventDefault();
+              let formSubElement = document.getElementById('form-submission');
+              let formSubMessage = document.getElementById('submission-message');
+
+              formSubElement.className = "form-submission";
+
+              let canSend = true;
+              if (event.target[0].value === "") {
+                canSend = false;
+                if (formSubElement){
+                  formSubElement.classList.add("form-failure");
+                }
+                if (formSubMessage){
+                  formSubMessage.style.color = "orange";
+                  formSubMessage.innerText = "Please provide a Name";
+                }
+              }
+
+              if ((event.target[1].value === "" && canSend === true) || (event.target[1].value.indexOf('@') === -1 && canSend === true)){
+                canSend = false;
+                if (formSubElement){
+                  formSubElement.classList.add("form-failure");
+                }
+                if (formSubMessage){
+                  formSubMessage.style.color = "orange";
+                  formSubMessage.innerText = "Please provide an Email";
+                }
+              }
+
+              if (event.target[2].value === "" && canSend === true) {
+                canSend = false;
+                if (formSubElement){
+                  formSubElement.classList.add("form-failure");
+                }
+                if (formSubMessage){
+                  formSubMessage.style.color = "orange";
+                  formSubMessage.innerText = "Please provide a message";
+                }
+              }
+
+              if (canSend) {
+                emailjs.sendForm('service_a0jjx3w', 'template_8xj9gdj', this)
+                  .then(function() {
+                    if (formSubElement){
+                      formSubElement.classList.add("form-success");
+                    }
+                    if (formSubMessage){
+                      formSubMessage.style.color = "cyan";
+                      formSubMessage.innerText = "Message sent successfully";
+                    }
+                  }, function(error) {
+                    if (formSubElement){
+                      formSubElement.classList.add("form-failure");
+                    }
+                    if (formSubMessage){
+                      formSubMessage.style.color = "red";
+                      formSubMessage.innerText = "FAILED to send message. Try again.";
+                    }
+                  });
+              }
+
+              setTimeout(function () {
+                formSubElement.className = "form-submission";
+              }, 4000)
+          });
+      }
+  </script>
     <title>Mathias Sletten - Portfolio</title>
   </head>
   <body>
