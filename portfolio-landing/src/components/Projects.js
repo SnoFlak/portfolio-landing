@@ -3,7 +3,7 @@ import IDELineTemplate from "./IDELineTemplate";
 const Projects = () => {
     let StoreFrontCommentText = "// E-commerce storefront created using React.js, JSX, and CSS"
     let TaskmeisterCommentText = "// Calender with event tracking";
-    let CalculatorCommentText = "// Calculator built with Typescript, HTML, CSS"
+    let CalculatorCommentText = "// Book Shelving App for current/future reads using React.js"
 
     return(
         <div className="ide-line">
